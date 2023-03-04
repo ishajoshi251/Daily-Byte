@@ -1,0 +1,19 @@
+def validPalindrome(s):
+    s = s.lower()
+    S = ""
+    for i in s:
+        if 'a'<=i<='z':
+            S += i
+        else:
+            continue
+    l = 0
+    r = len(S)-1
+    while l<r:
+        if S[l] == S[r]:
+            l += 1 
+            r -= 1 
+        else:
+            return False
+    return True
+ans = validPalindrome("A man, a plan, a canal: Panama.")
+print(ans)
