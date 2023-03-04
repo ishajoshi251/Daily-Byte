@@ -1,0 +1,10 @@
+def reverseStr(str):
+    v = ""
+    for i in range(len(str)-1,-1,-1):
+        v += str[i]
+        if str[i] == " ":
+            v += " "
+    return v
+s = "The Daily Byte"
+ans = reverseStr(s)
+print(ans)
