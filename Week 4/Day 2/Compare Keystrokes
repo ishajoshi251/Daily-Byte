@@ -1,0 +1,30 @@
+class Solution(object):
+    def backspaceCompare(self, s, t):
+        """
+        :type s: str
+        :type t: str
+        :rtype: bool
+        """
+        S = []
+        T = []
+        for i in s:
+            if i != "#":
+                S.append(i)
+            else:
+                if not S:
+                    continue
+                else:
+                    S.pop()
+        for i in t:
+            if i != "#":
+                T.append(i)
+            else:
+                if not T:
+                    continue
+                else:
+                    T.pop()
+                
+        if S == T:
+            return True
+        else:
+            return False
